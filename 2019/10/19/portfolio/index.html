@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="tag1,tag2," />
 
 
 
@@ -88,13 +88,15 @@
 
 
 
-<meta name="description" content="慢慢走啊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="影月流光">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta name="description" content="SMTP 协议SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。">
+<meta name="keywords" content="tag1,tag2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="portfolio">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;19&#x2F;portfolio&#x2F;index.html">
 <meta property="og:site_name" content="影月流光">
-<meta property="og:description" content="慢慢走啊">
+<meta property="og:description" content="SMTP 协议SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-19T06:08:37.767Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/10/19/portfolio/"/>
 
 
 
 
 
-  <title>影月流光</title>
+  <title>portfolio | 影月流光</title>
   
 
 
@@ -150,8 +152,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband">
     <a href="https://github.com/you" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     </div>
@@ -266,9 +267,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -298,9 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/19/portfolio/" itemprop="url">portfolio</a></h1>
+          <h1 class="post-title" itemprop="name headline">portfolio</h1>
         
 
         <div class="post-meta">
@@ -403,16 +402,13 @@
       
 
       
-        
-          <p>SMTP 协议<br>SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/19/portfolio/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>SMTP 协议<br>SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。</p>
+<a id="more"></a>
+
+<p>STMP 环境调试<br>上面说了是使用 SMTP 协议发送的邮件，所以需要先查看你的发件人邮箱是否有开启 SMTP 协议，如没有，则需要开启，我测试使用的是 qq.com 的邮箱作为发信人邮箱，在设置中开启 SMTP 协议如下图所示。</p>
+<p>检查开发环境是否存在 smtplib<br>python 之所以这么受欢迎，一大特点是因为它拥有很多模块，编程就好像玩乐高积木一样。好了废话不多说，我们先检查 python 是否安装了这个模块,进入 python 的交互模式，执行 improt smtplib,如下报错，证明环境中不存在此模块，需要额外安装。</p>
+<hr>
+
       
     </div>
     
@@ -424,19 +420,51 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rivoc
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/10/19/portfolio/" title="portfolio">http://yoursite.com/2019/10/19/portfolio/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
   
 </div>
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/tag1/" rel="tag"># tag1</a>
+          
+            <a href="/tags/tag2/" rel="tag"># tag2</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -446,10 +474,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -457,6 +486,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -733,6 +766,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="tag1,tag2," />
+  <meta name="keywords" content="js,原型链," />
 
 
 
@@ -88,16 +88,22 @@
 
 
 
-<meta name="description" content="SMTP 协议SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。">
-<meta name="keywords" content="tag1,tag2">
+<meta name="description" content="__proto__">
+<meta name="keywords" content="js,原型链">
 <meta property="og:type" content="article">
-<meta property="og:title" content="portfolio">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;19&#x2F;portfolio&#x2F;index.html">
+<meta property="og:title" content="原型和原型链">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;07&#x2F;30&#x2F;%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE&#x2F;index.html">
 <meta property="og:site_name" content="影月流光">
-<meta property="og:description" content="SMTP 协议SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。">
+<meta property="og:description" content="__proto__">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-19T06:08:37.767Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-cb6758165bcf9dd1.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-d3eb0936b087a22e.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-7d0dc284e0215902.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-da1e4fc2dbfbb3ce.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-8192f9d97f0a0ae1.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:updated_time" content="2019-10-20T15:23:21.329Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-cb6758165bcf9dd1.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
 
 
 
@@ -127,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/19/portfolio/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/07/30/原型和原型链/"/>
 
 
 
 
 
-  <title>portfolio | 影月流光</title>
+  <title>原型和原型链 | 影月流光</title>
   
 
 
@@ -282,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/portfolio/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rivoc">
@@ -299,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">portfolio</h1>
+          <h1 class="post-title" itemprop="name headline">原型和原型链</h1>
         
 
         <div class="post-meta">
@@ -311,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-19T10:25:34+08:00">
-                2019-10-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-30T19:10:08+08:00">
+                2019-07-30
               </time>
             
 
@@ -334,8 +340,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/xxx/" itemprop="url" rel="index">
-                    <span itemprop="name">xxx</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/%E5%8E%9F%E5%9E%8B%E9%93%BE/" itemprop="url" rel="index">
+                    <span itemprop="name">原型链</span>
                   </a>
                 </span>
 
@@ -365,7 +382,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  273字
+                  492字
                 </span>
               
 
@@ -402,12 +419,32 @@
       
 
       
-        <p>SMTP 协议<br>SMTP(简单邮件传输协议)，邮件传送代理程序使用 SMTP 协议来发送电邮到接收者的邮件服务器。SMTP 协议只能用来发送邮件，不能用来接收邮件，而大多数的邮件发送服务器都是使用 SMTP 协议。SMTP 协议的默认 TCP 端口号是 25。</p>
-<a id="more"></a>
+        <h2 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a>__proto__</h2><a id="more"></a>
 
-<p>STMP 环境调试<br>上面说了是使用 SMTP 协议发送的邮件，所以需要先查看你的发件人邮箱是否有开启 SMTP 协议，如没有，则需要开启，我测试使用的是 qq.com 的邮箱作为发信人邮箱，在设置中开启 SMTP 协议如下图所示。</p>
-<p>检查开发环境是否存在 smtplib<br>python 之所以这么受欢迎，一大特点是因为它拥有很多模块，编程就好像玩乐高积木一样。好了废话不多说，我们先检查 python 是否安装了这个模块,进入 python 的交互模式，执行 improt smtplib,如下报错，证明环境中不存在此模块，需要额外安装。</p>
-<hr>
+<p>任何对象在创建时都会具有<code>__proto__</code>属性，它指向构造该对象的构造函数的原型对象</p>
+<p>实例化一个 String 对象 并输出</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-cb6758165bcf9dd1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.jpg"></p>
+<p>可以看到 str 有 0、1、length、<code>__proto__</code>四个属性，点开<code>__proto__</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-d3eb0936b087a22e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><code>str.__proto__</code>上存在着很多方法，所有 String 实例都可以共享这上面的属性和方法</p>
+<h2 id="prototype-与-constructor"><a href="#prototype-与-constructor" class="headerlink" title="prototype 与 constructor"></a>prototype 与 constructor</h2><p>任何构造函数在创建时都会具有 prototype 属性，指向当前构造函数的原型对象，在默认情况下，所有的原型对象都会自动获得一个 constructor 属性，该属性指回 prototype 属性所在的构造函数,</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-7d0dc284e0215902.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>大多数情况下可以把<code>__proto__</code>理解为构造器的原型即<code>Object.__proto__===constructor.prototype</code></p>
+<p>以下是一种特殊情况</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-da1e4fc2dbfbb3ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>js 里一切都可以被当做对象，任何对象都会具有<code>__proto__</code>属性。而 js 引擎在读取实例对象的属性时，如果存在普通属性中，就直接使用，如果找不到，就会查找与对象关联的原型中的属性，一直找到顶层（Object.prototype）。原型链上的对象靠<code>__proto__</code>属性连在一起形成了一条链，称为原型链。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-8192f9d97f0a0ae1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原型链完整结构图"></p>
+<p>#</p>
+<p>原型链中 Function 和 Object 之间的各种关系比较重要</p>
+<p>首先记住对象祖先为 Object.prototype，函数祖先为 Function.prototype。</p>
+<p>1.<code>Object.__proto__ === Function.prototype // true</code></p>
+<p>JS 里 Function 既是构造函数也是对象。作为构造函数来看，任何函数都是 Function 构造出来的，Object 是是函数对象，是 Function 构造的，所以<code>Object.__proto__===Function.prototype</code>,</p>
+<p>2.<code>Function.__proto__ === Function.prototype // true</code></p>
+<p>作为函数对象来看，Function 是通过 Function 函数来创建，也就是自己创建自己</p>
+<p>3.<code>Function.prototype.__proto__ === Object.prototype //true</code></p>
+<p>Function.prototype 也是对象，继承于 Object.prototype</p>
+<h2 id="hasOwnProperty-NaN"><a href="#hasOwnProperty-NaN" class="headerlink" title="hasOwnProperty"></a>hasOwnProperty</h2><p>hasOwnProperty()返回一个布尔值，判断对象是否包含特定的自身（非继承）属性。</p>
+<p>用法：<code>object.hasOwnProperty(proName)</code>　参数必须是以字符串的形式</p>
 
       
     </div>
@@ -428,7 +465,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/10/19/portfolio/" title="portfolio">http://yoursite.com/2019/10/19/portfolio/</a>
+    <a href="http://yoursite.com/2019/07/30/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="原型和原型链">http://yoursite.com/2019/07/30/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -451,9 +488,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tag1/" rel="tag"># tag1</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
-            <a href="/tags/tag2/" rel="tag"># tag2</a>
+            <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" rel="tag"># 原型链</a>
           
         </div>
       
@@ -466,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/30/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" rel="next" title="原型和原型链">
-                <i class="fa fa-chevron-left"></i> 原型和原型链
+              <a href="/2019/07/23/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="next" title="js数据类型">
+                <i class="fa fa-chevron-left"></i> js数据类型
               </a>
             
           </div>
@@ -476,8 +513,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/20/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A22/" rel="prev" title="js数据类型转换(二)">
-                js数据类型转换(二) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/19/portfolio/" rel="prev" title="portfolio">
+                portfolio <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -530,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -621,6 +667,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#proto"><span class="nav-number">1.</span> <span class="nav-text">__proto__</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prototype-与-constructor"><span class="nav-number">2.</span> <span class="nav-text">prototype 与 constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链"><span class="nav-number">3.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hasOwnProperty-NaN"><span class="nav-number">4.</span> <span class="nav-text">hasOwnProperty</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

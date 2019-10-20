@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="命令行常用命令," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="影月流光" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="(一)ls 命令1.命令功能ls 命令用于打印当前文件夹的内容">
+<meta name="keywords" content="命令行常用命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初见命令行">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;07&#x2F;03&#x2F;%E5%88%9D%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C&#x2F;index.html">
+<meta property="og:site_name" content="影月流光">
+<meta property="og:description" content="(一)ls 命令1.命令功能ls 命令用于打印当前文件夹的内容">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-ce0dcfc49ae100da.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-aa08e8a18cab677c.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-b7cfe3dec431e215.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-6120a716bd3607f3.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-b384bbabbd56a5e0.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-cf0967abebd2d5dc.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-bbcf3dabb36aa448.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-a4f7b2d6f29fac3f.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-08cb5ad671ab7143.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-6f56f286e2d5bf02.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-93aa682a501f9cde.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-595cf9580abf1ca9.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-1f5ca5f311a578da.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-6b3a648b3fc9779a.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-cb54e98431167515.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-8d040b478d7f295c.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:updated_time" content="2019-10-20T09:03:47.440Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-ce0dcfc49ae100da.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/03/初见命令行/"/>
+
+
+
+
+
+  <title>初见命令行 | 影月流光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband">
+    <a href="https://github.com/you" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    </div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">影月流光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">疏影横斜水清浅</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-作品集">
+          <a href="/portfolios" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            作品集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/03/%E5%88%9D%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rivoc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="影月流光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">初见命令行</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-03T23:57:34+08:00">
+                2019-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" itemprop="url" rel="index">
+                    <span itemprop="name">命令行</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.4k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一-ls-命令"><a href="#一-ls-命令" class="headerlink" title="(一)ls 命令"></a>(一)ls 命令</h2><h3 id="1-命令功能"><a href="#1-命令功能" class="headerlink" title="1.命令功能"></a>1.命令功能</h3><p>ls 命令用于打印当前文件夹的内容</p>
+<a id="more"></a>
+
+<h3 id="2-命令格式"><a href="#2-命令格式" class="headerlink" title="2.命令格式"></a>2.命令格式</h3><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls <span class="string">[选项]</span> 目录名称</span><br></pre></td></tr></table></figure>
+
+<p>在不添加任何选项时，ls 命令默认列出当前文件夹下非隐藏（以圆点“.”开头的文件和文件夹默认隐藏）的所有文件和文件夹</p>
+<h3 id="3-常用参数"><a href="#3-常用参数" class="headerlink" title="3.常用参数"></a>3.常用参数</h3><p>-a 列出当前文件夹下所有的文件和文件夹，包括以 . 开头的隐藏文件。位于起首处的 .. 和 . 依次是指父文件夹和当前文件夹。**</p>
+<p>-A 同-a，但不列出.和..</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-ce0dcfc49ae100da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>-l 列出当前文件夹下非隐藏文件和文件夹的详细信息</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-aa08e8a18cab677c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>-la/-al 列出当前文件夹下全部文件和文件夹的详细信息</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-b7cfe3dec431e215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="（二）cat-命令"><a href="#（二）cat-命令" class="headerlink" title="（二）cat 命令"></a>（二）cat 命令</h2><h3 id="1-命令功能-1"><a href="#1-命令功能-1" class="headerlink" title="1.命令功能"></a>1.命令功能</h3><p>cat 命令用以将文件、标准输入内容打印至标准输出。常用于显示文件内容、创建文件、向文件中追加内容</p>
+<h4 id="1-1-显示文件内容-cat-filename"><a href="#1-1-显示文件内容-cat-filename" class="headerlink" title="1.1 显示文件内容 :cat filename"></a><strong>1.1 显示文件内容</strong> :cat filename</h4><p><img src="https://upload-images.jianshu.io/upload_images/14239471-6120a716bd3607f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="1-2-创建新文件：cat-gt-filename"><a href="#1-2-创建新文件：cat-gt-filename" class="headerlink" title="1.2 创建新文件：cat &gt; filename"></a><strong>1.2 创建新文件</strong>：cat &gt; filename</h4><p>1、键入 cat &gt; filename.txt 后回车 2、录入文本内容； 3、键入回车； 4、在键盘上按下 Ctrl+D</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-b384bbabbd56a5e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="1-3-将几个文件合并为一个文件：cat-file1-file2-gt-file"><a href="#1-3-将几个文件合并为一个文件：cat-file1-file2-gt-file" class="headerlink" title="1.3 将几个文件合并为一个文件：cat file1 file2 &gt; file"></a>1.3 将几个文件合并为一个文件：cat file1 file2 &gt; file</h4><p><img src="https://upload-images.jianshu.io/upload_images/14239471-cf0967abebd2d5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>注意:file 若已存在，此操作会把 file 里的内容清空</p>
+<h3 id="2-命令格式-1"><a href="#2-命令格式-1" class="headerlink" title="2.命令格式"></a>2.命令格式</h3><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="string">[选项]</span> <span class="string">[文件]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-常用参数-1"><a href="#3-常用参数-1" class="headerlink" title="3.常用参数"></a>3.常用参数</h3><table>
+<thead>
+<tr>
+<th align="left"><strong>-n 或 –number</strong></th>
+<th><strong>由 1 开始对所有输出的行数编号。</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>-b 或 –number-nonblank</strong></td>
+<td><strong>和 -n 相似，只不过对于空白行不编号。</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-s 或 –squeeze-blank</strong></td>
+<td><strong>当遇到有连续两行以上的空白行，就代换为一行的空白行。</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-v 或 –show-nonprinting</strong></td>
+<td><strong>使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-E 或 –show-ends</strong></td>
+<td><strong>在每行结束处显示 $</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-T 或 –show-tabs</strong></td>
+<td><strong>将 TAB 字符显示为 ^I</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-A, –show-all</strong></td>
+<td><strong>等价于 -vET</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-e</strong></td>
+<td><strong>等价于”-vE”选项</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>-t</strong></td>
+<td><strong>等价于”-vT”选项</strong></td>
+</tr>
+</tbody></table>
+<h2 id="（三）mv-命令"><a href="#（三）mv-命令" class="headerlink" title="（三）mv 命令"></a>（三）mv 命令</h2><h3 id="1-命令功能-2"><a href="#1-命令功能-2" class="headerlink" title="1.命令功能"></a>1.命令功能</h3><p>mv 命令用来移动文件或者将文件改名</p>
+<h3 id="2-命令格式-2"><a href="#2-命令格式-2" class="headerlink" title="2.命令格式"></a>2.命令格式</h3><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv <span class="string">[选项]</span> 源文件或目录 目标文件或目录</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>命令格式</th>
+<th>运行结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mv 文件名 文件名</td>
+<td>同级目录下，将源文件名改为目标文件名</td>
+</tr>
+<tr>
+<td>mv 文件名 目录名</td>
+<td>将文件移动到目标目录，若目标目录不存在则报错</td>
+</tr>
+<tr>
+<td>mv 目录名 目录名</td>
+<td>目标目录已存在，将源目录移动到目标目录（如果有冲突文件则直接覆盖，如果有冲突文件夹，则冲突部分无法移动）；目标目录不存在则改名</td>
+</tr>
+<tr>
+<td>mv 目录名 文件名</td>
+<td>出错</td>
+</tr>
+</tbody></table>
+<h4 id="2-1-文件改名"><a href="#2-1-文件改名" class="headerlink" title="2.1 文件改名"></a><strong>2.1 文件改名</strong></h4><p><img src="https://upload-images.jianshu.io/upload_images/14239471-bbcf3dabb36aa448.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="2-2文件移动到目标文件夹"><a href="#2-2文件移动到目标文件夹" class="headerlink" title="2.2文件移动到目标文件夹"></a><strong>2.2</strong>文件移动到目标文件夹</h4><p>test2 文件移动到当前目录下的 css 文件夹中</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-a4f7b2d6f29fac3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>如果移动到不存在的目录会报错</p>
+<p>如果是 mv test2 /css,实际上是将 test2 移动到根目录下并更名为 css<br><img src="https://upload-images.jianshu.io/upload_images/14239471-08cb5ad671ab7143.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-6f56f286e2d5bf02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-93aa682a501f9cde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>移动到正确的位置并改名为 test2<br><img src="https://upload-images.jianshu.io/upload_images/14239471-595cf9580abf1ca9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="3-常用参数-2"><a href="#3-常用参数-2" class="headerlink" title="3.常用参数"></a>3.常用参数</h3><table>
+<thead>
+<tr>
+<th><strong>-i</strong></th>
+<th><strong>若存在同名文件，则向用户询问是否覆盖</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>-f</strong></td>
+<td><strong>覆盖已有文件时，不进行任何提示</strong></td>
+</tr>
+<tr>
+<td><strong>-b</strong></td>
+<td><strong>当文件存在时，覆盖前为其创建一个备份</strong></td>
+</tr>
+<tr>
+<td><strong>-u</strong></td>
+<td><strong>当源文件比目标文件新，或者目标文件不存在时，才执行移动此操作</strong></td>
+</tr>
+</tbody></table>
+<h2 id="（四）touch-命令"><a href="#（四）touch-命令" class="headerlink" title="（四）touch 命令"></a><strong>（四）touch 命令</strong></h2><h3 id="1-命令功能-3"><a href="#1-命令功能-3" class="headerlink" title="1.命令功能"></a><strong>1.命令功能</strong></h3><p><strong>创建空文件，或者改变文件的时间戳属性</strong></p>
+<h3 id="2-命令格式-3"><a href="#2-命令格式-3" class="headerlink" title="2.命令格式"></a><strong>2.命令格式</strong></h3><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch <span class="string">[选项]</span> 文件名或者目录名</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-常用参数-3"><a href="#3-常用参数-3" class="headerlink" title="3.常用参数"></a><strong>3.常用参数</strong></h3><table>
+<thead>
+<tr>
+<th><strong>-a</strong></th>
+<th><strong>只修改文件的 access(访问)时间.</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>-c</strong>或–no-create</td>
+<td><strong>仅修改文件的时间参数（3 个时间参数都改变），如果文件不存在，则不建立新文件</strong></td>
+</tr>
+<tr>
+<td><strong>-d</strong></td>
+<td><strong>使用指定的日期时间，而非现在的时间</strong></td>
+</tr>
+<tr>
+<td><strong>-m</strong></td>
+<td><strong>指修改 Modify(修改)时间,而不修改 access(访问)时间</strong></td>
+</tr>
+<tr>
+<td><strong>-t</strong></td>
+<td><strong>使用指定的时间值 time 作为指定文件 file 相应时间戳记的新值．此处的 time 规定为如下形式 的十进制数 ∶ [[CC]YY]MMDDhhmm[.SS]</strong></td>
+</tr>
+<tr>
+<td><strong>-r 原文件 目标文件</strong></td>
+<td><strong>将文件设置和参考文件的日期时间相同</strong></td>
+</tr>
+</tbody></table>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-1f5ca5f311a578da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>Acess time：即文件存取时间，或者理解为“最后一次读取时间”，如使用 touch、cat、more 等命令会修改此数值，但使用 ls，stat 查看不会改变。</p>
+<p>Modify time：修改时间，这里是指文件内容最后一次修改时间。ls 命令默认显示就是这个时间。</p>
+<p>Change time：改变时间，这里是指文件属性最后修改时间，如修改权限、名称、大小等。</p>
+<p>touch 命令可以修改文件的访问时间和修改时间，但只要修改时间一改动，访问时间和改变时间都会改动</p>
+<h4 id="关于-t-的时间书写格式"><a href="#关于-t-的时间书写格式" class="headerlink" title="关于-t 的时间书写格式**"></a>关于-t 的时间书写格式**</h4><p>CC 为年数中的前两位，即”世纪数”；YY 为年数的后两位，即某世纪中的年数．如果不给出 CC 的值，则 touch 将把年数 CCYY 限定在 1969–2068 之内．MM 为月数，DD 为天将把年数 CCYY 限定在 1969–2068 之内．MM 为月数，DD 为天数，hh 为小时数(几点)，mm 为分钟数，SS 为秒数．此处秒的设定范围是 0–61，这样可以处理闰秒．这些数字组成的时间是环境变量 TZ 指定的时区中的一个时间。由于系统的限制，早于 1970 年 1 月 1 日的时间是错误的。</p>
+<h2 id="五-explainshell-com"><a href="#五-explainshell-com" class="headerlink" title="(五)explainshell.com"></a>(五)explainshell.com</h2><p>该网站可以将命令行的格式和用法列出来，只需要把命令行输入进去就可以得到相应的命令和参数的意思</p>
+<p>例子：</p>
+<p>搜索 mv，按回车</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-6b3a648b3fc9779a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>点击 mv</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-cb54e98431167515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>进入新页面，列出了 mv 命令的详细用法</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-8d040b478d7f295c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rivoc
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/07/03/%E5%88%9D%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="初见命令行">http://yoursite.com/2019/07/03/%E5%88%9D%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="tag"># 命令行常用命令</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/03/http%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E4%B8%8Ecurl%E5%91%BD%E4%BB%A4/" rel="next" title="http请求响应与curl命令">
+                <i class="fa fa-chevron-left"></i> http请求响应与curl命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/10/iframe%E3%80%81a%E3%80%81form%E3%80%81iinput%E6%A0%87%E7%AD%BE/" rel="prev" title="iframe、a、form、input 标签">
+                iframe、a、form、input 标签 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="rivoc" />
+            
+              <p class="site-author-name" itemprop="name">rivoc</p>
+              <p class="site-description motion-element" itemprop="description">慢慢走啊</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+             
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/rivoc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="1074852904@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+               
+            </div>
+           <video controls="" autoplay="" name="media"><source src="http://m8.music.126.net/20191020200137/b488384055c168ae91243389a5157717/ymusic/560e/0159/065b/ad87def2996332558a8611ee3ec61bc5.mp3?bitrate=128000" type="audio/mpeg"></video>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-ls-命令"><span class="nav-number">1.</span> <span class="nav-text">(一)ls 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-命令功能"><span class="nav-number">1.1.</span> <span class="nav-text">1.命令功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-命令格式"><span class="nav-number">1.2.</span> <span class="nav-text">2.命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-常用参数"><span class="nav-number">1.3.</span> <span class="nav-text">3.常用参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（二）cat-命令"><span class="nav-number">2.</span> <span class="nav-text">（二）cat 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-命令功能-1"><span class="nav-number">2.1.</span> <span class="nav-text">1.命令功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-显示文件内容-cat-filename"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 显示文件内容 :cat filename</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-创建新文件：cat-gt-filename"><span class="nav-number">2.1.2.</span> <span class="nav-text">1.2 创建新文件：cat &gt; filename</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-将几个文件合并为一个文件：cat-file1-file2-gt-file"><span class="nav-number">2.1.3.</span> <span class="nav-text">1.3 将几个文件合并为一个文件：cat file1 file2 &gt; file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-命令格式-1"><span class="nav-number">2.2.</span> <span class="nav-text">2.命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-常用参数-1"><span class="nav-number">2.3.</span> <span class="nav-text">3.常用参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（三）mv-命令"><span class="nav-number">3.</span> <span class="nav-text">（三）mv 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-命令功能-2"><span class="nav-number">3.1.</span> <span class="nav-text">1.命令功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-命令格式-2"><span class="nav-number">3.2.</span> <span class="nav-text">2.命令格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-文件改名"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.1 文件改名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2文件移动到目标文件夹"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2文件移动到目标文件夹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-常用参数-2"><span class="nav-number">3.3.</span> <span class="nav-text">3.常用参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（四）touch-命令"><span class="nav-number">4.</span> <span class="nav-text">（四）touch 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-命令功能-3"><span class="nav-number">4.1.</span> <span class="nav-text">1.命令功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-命令格式-3"><span class="nav-number">4.2.</span> <span class="nav-text">2.命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-常用参数-3"><span class="nav-number">4.3.</span> <span class="nav-text">3.常用参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于-t-的时间书写格式"><span class="nav-number">4.3.1.</span> <span class="nav-text">关于-t 的时间书写格式**</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-explainshell-com"><span class="nav-number">5.</span> <span class="nav-text">(五)explainshell.com</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rivoc</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.5k字</span>
+</div>
+
+
+
+ 
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="130" alpha="0.5"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/33.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>

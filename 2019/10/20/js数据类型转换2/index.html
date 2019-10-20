@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="js数据类型," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="影月流光" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="ES6构造数组Array.ofArray.of( )方法总会创建一个包含所有传入参数的数组，而不管参数的数量与类型，比Array()来创建数组要好，因为当使用单个数值参数来调用 Array 构造器时，数组的长度属性会被设置为该参数 12Array(3) &#x2F;&#x2F;[empty x 3] 一个length为3的空数组 [, , ,]Array.of(&amp;#123;name:&quot;zhang&quot;&amp;#125;,1,[">
+<meta name="keywords" content="js数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数据类型转换(二)">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;20&#x2F;js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A22&#x2F;index.html">
+<meta property="og:site_name" content="影月流光">
+<meta property="og:description" content="ES6构造数组Array.ofArray.of( )方法总会创建一个包含所有传入参数的数组，而不管参数的数量与类型，比Array()来创建数组要好，因为当使用单个数值参数来调用 Array 构造器时，数组的长度属性会被设置为该参数 12Array(3) &#x2F;&#x2F;[empty x 3] 一个length为3的空数组 [, , ,]Array.of(&amp;#123;name:&quot;zhang&quot;&amp;#125;,1,[">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-20T15:43:19.327Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/20/js数据类型转换2/"/>
+
+
+
+
+
+  <title>js数据类型转换(二) | 影月流光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband">
+    <a href="https://github.com/you" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    </div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">影月流光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">疏影横斜水清浅</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-作品集">
+          <a href="/portfolios" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            作品集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rivoc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="影月流光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js数据类型转换(二)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T17:13:45+08:00">
+                2019-10-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">数据类型</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="ES6构造数组"><a href="#ES6构造数组" class="headerlink" title="ES6构造数组"></a>ES6构造数组</h2><h3 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of"></a><strong>Array.of</strong></h3><p>Array.of( )方法总会创建一个包含所有传入参数的数组，而不管参数的数量与类型，比Array()来创建数组要好，因为当使用单个数值参数来调用 Array 构造器时，数组的长度属性会被设置为该参数</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="constructor">Array(3)</span> <span class="comment">//[empty x 3] 一个length为3的空数组 [, , ,]</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Array</span>.</span></span><span class="keyword">of</span>(&#123;name:<span class="string">"zhang"</span>&#125;,<span class="number">1</span>,<span class="literal">[<span class="number">1</span>,<span class="number">2</span>]</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+
+<h2 id="对象转数组"><a href="#对象转数组" class="headerlink" title="对象转数组"></a>对象转数组</h2><h3 id="伪数组转数组"><a href="#伪数组转数组" class="headerlink" title="伪数组转数组"></a>伪数组转数组</h3><h4 id="Array-from-obj"><a href="#Array-from-obj" class="headerlink" title="Array.from(obj)"></a>Array.from(obj)</h4><p>将一个类数组对象或可遍历对象(iterable)转换成一个真正的数组(不管有无iterator接口)</p>
+<blockquote>
+<p>注：</p>
+<p>1.object中必须有length属性，用于指定数组长度，如果没有length，转换后的是一个空数组</p>
+<p>2.object属性名必须是数值型或字符串类型的数字</p>
+<p>3.以上两点就是伪数组的定义</p>
+</blockquote>
+<h4 id="slice-call-obj-Array-prototype-slice-call-obj"><a href="#slice-call-obj-Array-prototype-slice-call-obj" class="headerlink" title="[].slice.call(obj)/Array.prototype.slice.call(obj)"></a>[].slice.call(obj)/Array.prototype.slice.call(obj)</h4><p>同上，伪数组和可遍历的对象（iterable）可以转换成真数组</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">const arrayLike = &#123;</span><br><span class="line">  <span class="string">'0'</span>: <span class="string">'a'</span>,</span><br><span class="line">  <span class="string">'1'</span>: <span class="string">'b'</span>,</span><br><span class="line">  <span class="string">'2'</span>: <span class="string">'c'</span>,</span><br><span class="line">  length: <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line">const <span class="keyword">array</span> = <span class="keyword">Array</span>.<span class="keyword">from</span>(arratLike) // [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">let a= [].<span class="keyword">slice</span>.<span class="keyword">call</span>(arrayLike) //[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line"></span><br><span class="line">const obj = &#123;</span><br><span class="line">  <span class="string">'name'</span>: <span class="string">'a'</span>,</span><br><span class="line">  <span class="string">'age'</span>: <span class="string">'b'</span>,</span><br><span class="line">  <span class="string">'hobby'</span>: <span class="string">'c'</span>,</span><br><span class="line">  length: <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line">let b= [].<span class="keyword">slice</span>.<span class="keyword">call</span>(obj)//[]</span><br><span class="line">console.log([].<span class="keyword">slice</span>.<span class="keyword">call</span>(&#123;<span class="type">name</span>: <span class="string">'obj'</span>&#125;)); // []</span><br><span class="line">console.log([].<span class="keyword">slice</span>.<span class="keyword">call</span>(&#123;<span class="number">0</span>: <span class="string">'zero'</span>, <span class="number">1</span>: <span class="string">'one'</span>&#125;)); // []</span><br><span class="line">console.log([].<span class="keyword">slice</span>.<span class="keyword">call</span>(<span class="string">'123'</span>))//[<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">Array</span>.<span class="keyword">from</span>()可接受第二个参数，作用类似于数组的map方法，对每个元素进行处理，并放入返回的数组中。</span><br><span class="line">const spans = document.querySelectorAll(<span class="string">'span'</span>); //nodelist是类似数组的对象</span><br><span class="line">const <span class="keyword">array</span> = <span class="keyword">Array</span>.<span class="keyword">from</span>(spans, s =&gt; s.textContent);</span><br><span class="line"></span><br><span class="line">函数实参（arguments)的转化</span><br><span class="line"><span class="keyword">function</span> fn() &#123;</span><br><span class="line"></span><br><span class="line">var <span class="keyword">temp</span> = [].<span class="keyword">slice</span>.<span class="keyword">call</span>(arguments);</span><br><span class="line"></span><br><span class="line">console.log(<span class="keyword">temp</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,"a","se");//[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, "a", "se"]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="可遍历对象转数组（部署了iterator接口）"><a href="#可遍历对象转数组（部署了iterator接口）" class="headerlink" title="可遍历对象转数组（部署了iterator接口）"></a>可遍历对象转数组（部署了iterator接口）</h3><p>可遍历对象：具备了iterator接口的数据结构（伪数组中只有string、nodelist、arguments具有iterator接口）</p>
+<ul>
+<li>Array</li>
+<li>Map</li>
+<li>Set</li>
+<li>String</li>
+<li>函数的arguments对象</li>
+<li>NodeList对象</li>
+<li>TypedArray</li>
+</ul>
+<h4 id="Array-from-obj-1"><a href="#Array-from-obj-1" class="headerlink" title="Array.from(obj)"></a>Array.from(obj)</h4><h4 id="slice-call-obj-Array-prototype-slice-call-obj-1"><a href="#slice-call-obj-Array-prototype-slice-call-obj-1" class="headerlink" title="[].slice.call(obj)/Array.prototype.slice.call(obj)"></a>[].slice.call(obj)/Array.prototype.slice.call(obj)</h4><h4 id="扩展运算符（…）"><a href="#扩展运算符（…）" class="headerlink" title="扩展运算符（…）"></a>扩展运算符（…）</h4><p>（(…)背后调用的是遍历器接口，所以任何有iterator的对象都可以用(…)转化为真正的数组）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[...'hello'] //["h", "e", "l", "l", "o"]</span><br><span class="line"></span><br><span class="line">//扩展运算符用于赋值时，只能放在最后一位</span><br><span class="line">const [first, ...middle, last] = [1, 2, 3, 4, 5] //报错</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="其他方法（Object方法）"><a href="#其他方法（Object方法）" class="headerlink" title="其他方法（Object方法）"></a>其他方法（Object方法）</h3><blockquote>
+<p>for…in循环的顺序</p>
+<p><strong>先遍历出整数属性（integer properties，按照升序），然后其他属性按照创建时候的顺序遍历出来</strong>。</p>
+</blockquote>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> codes = &#123;</span><br><span class="line"><span class="string">"49"</span>: <span class="string">"Germany"</span>,</span><br><span class="line"><span class="string">"41"</span>: <span class="string">"Switzerland"</span>,</span><br><span class="line"><span class="string">"44"</span>: <span class="string">"Great Britain"</span>,</span><br><span class="line"><span class="string">"1"</span>: <span class="string">"USA"</span></span><br><span class="line">&#125;;</span><br><span class="line">for(<span class="keyword">let</span> <span class="keyword">code</span> <span class="keyword">in</span> codes) &#123;</span><br><span class="line">alert(<span class="keyword">code</span>); <span class="comment">// 1, 41, 44, 49</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Object-keys-obj"><a href="#Object-keys-obj" class="headerlink" title="Object.keys(obj)"></a>Object.keys(obj)</h4><p>返回一个对象的自身（不包括原型链上的）可枚举属性的属性名组成的数组，属性名的排列顺序和for…in相同</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> obj = &#123; foo: <span class="string">"bar"</span>, baz: <span class="number">42</span> &#125;,</span><br><span class="line"><span class="built_in">keys</span> = Object.<span class="built_in">keys</span>(obj);</span><br><span class="line">console.log(<span class="built_in">keys</span>);</span><br><span class="line"><span class="comment">// ["foo","baz"]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Object-getOwnPropertyNames-obj"><a href="#Object-getOwnPropertyNames-obj" class="headerlink" title="Object.getOwnPropertyNames(obj)"></a>Object.getOwnPropertyNames(obj)</h4><p>返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。属性名的排列顺序和for…in相同</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  x : <span class="number">1</span>,</span><br><span class="line">  y : <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">Object</span>.defineProperty(obj,<span class="string">'z'</span>,&#123;</span><br><span class="line">  enumerable : <span class="keyword">false</span></span><br><span class="line">&#125;)</span><br><span class="line">console.log(<span class="keyword">Object</span>.getOwnPropertyNames(obj))  // ["x", "y", "z"] 包含不可枚举属性 。</span><br><span class="line">console.log(<span class="keyword">Object</span>.keys(obj))                 // ["x", "y"]只包含可枚举属性 。</span><br></pre></td></tr></table></figure>
+
+<h4 id="Object-values-obj"><a href="#Object-values-obj" class="headerlink" title="Object.values(obj)"></a>Object.values(obj)</h4><p>返回一个对象的自身可枚举属性值组成数组（会过滤属性名为Symbol值的属性值），属性值的排列顺序和for…in相同</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var an_obj = &#123; <span class="number">100</span>: <span class="string">'a'</span>, <span class="number">2</span>: <span class="string">'b'</span>, <span class="number">7</span>: <span class="string">'c'</span> &#125;;</span><br><span class="line">console.log(<span class="keyword">Object</span>.<span class="keyword">values</span>(an_obj)); // [<span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'a'</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="Object-entries-obj"><a href="#Object-entries-obj" class="headerlink" title="Object.entries(obj)"></a>Object.entries(obj)</h4><p>返回一个对象的自身可枚举属性的键值对数组，排列与使用 for…in 循环遍历该对象时返回的顺序一致</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const simuArray = &#123; <span class="number">0</span>: <span class="string">'a'</span>, <span class="number">1</span>: <span class="string">'b'</span>, <span class="number">2</span>: <span class="string">'c'</span> &#125;;</span><br><span class="line">console.log(<span class="symbol">Object</span>.entries(simuArray)); // [ [<span class="string">'0'</span>, <span class="string">'a'</span>], [<span class="string">'1'</span>, <span class="string">'b'</span>], [<span class="string">'2'</span>, <span class="string">'c'</span>] ]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>entries搭配Map获取属性的个数，搭配forEach和解构，获取键值对</span><br><span class="line">var object=&#123;a:<span class="number">11</span>,b:<span class="number">22</span>,c:<span class="keyword">function</span><span class="literal">()</span>&#123;&#125;&#125;</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>entries(object)<span class="comment">//=&gt;[['a',11],['b',22],['c','function()&#123;&#125;']]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="constructor">Map(Object.<span class="params">entries</span>(<span class="params">object</span>)</span>).size</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>entries(object).for<span class="constructor">Each([<span class="params">key</span>,<span class="params">value</span>]=&gt;<span class="params">console</span>.<span class="params">log</span>(`$&#123;<span class="params">key</span>&#125; $&#123;<span class="params">value</span>&#125;`)</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="字符串转对象，对象转字符串"><a href="#字符串转对象，对象转字符串" class="headerlink" title="字符串转对象，对象转字符串"></a>字符串转对象，对象转字符串</h2><p>JSON.stringify() 对象转字符串</p>
+<p>JSON.parse() 字符串转对象</p>
+<h5 id="-1"><a href="#-1" class="headerlink" title=""></a></h5><h2 id="字符串转数组"><a href="#字符串转数组" class="headerlink" title="字符串转数组"></a>字符串转数组</h2><p>split()、map()</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//借用数组的<span class="built_in">map</span>方法</span><br><span class="line"><span class="keyword">let</span> <span class="attr">name</span> = <span class="string">"Chuloo"</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">map</span> = Array.prototype.<span class="built_in">map</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">newName</span> = <span class="built_in">map</span>.call(name, <span class="attr">eachLetter</span> =&gt; &#123;</span><br><span class="line">return `$&#123;eachLetter&#125;a`</span><br><span class="line">&#125;)</span><br><span class="line">console.log(newName)//[<span class="string">"Ca"</span>, <span class="string">"ha"</span>, <span class="string">"ua"</span>, <span class="string">"la"</span>, <span class="string">"oa"</span>, <span class="string">"oa"</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通过“借用”数组的方法可以很方便的处理字符串。可以“借用”数组的非变更方法，但不能“借用”数组的可变更方法。</p>
+<p>非变更方法：不改变原数组，并返回一个新数组</p>
+</blockquote>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//借用数组join方法还可以实现字符串拼接</span></span><br><span class="line">let <span class="keyword">new</span><span class="type">Name2</span> = <span class="keyword">Array</span>.prototype.join.call(name,<span class="string">"-"</span>)</span><br><span class="line">console.log(<span class="keyword">new</span><span class="type">Name2</span>)<span class="comment">//C-h-u-l-o-o</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="数组转字符串"><a href="#数组转字符串" class="headerlink" title="数组转字符串"></a>数组转字符串</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a, b;</span><br><span class="line">a = new Array(<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>);</span><br><span class="line">b = a.join(<span class="string">"-"</span>);</span><br><span class="line">console.log(b)<span class="comment">//0-1-2-3-4-5</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rivoc
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/10/20/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A22/" title="js数据类型转换(二)">http://yoursite.com/2019/10/20/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A22/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag"># js数据类型</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/19/portfolio/" rel="next" title="portfolio">
+                <i class="fa fa-chevron-left"></i> portfolio
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/20/BFC%E4%B8%8E%E6%8A%98%E5%8F%A0/" rel="prev" title="BFC与折叠">
+                BFC与折叠 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="rivoc" />
+            
+              <p class="site-author-name" itemprop="name">rivoc</p>
+              <p class="site-description motion-element" itemprop="description">慢慢走啊</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+             
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/rivoc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="1074852904@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+               
+            </div>
+           <video controls="" autoplay="" name="media"><source src="http://m8.music.126.net/20191020200137/b488384055c168ae91243389a5157717/ymusic/560e/0159/065b/ad87def2996332558a8611ee3ec61bc5.mp3?bitrate=128000" type="audio/mpeg"></video>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6构造数组"><span class="nav-number">1.</span> <span class="nav-text">ES6构造数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-of"><span class="nav-number">1.1.</span> <span class="nav-text">Array.of</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象转数组"><span class="nav-number">2.</span> <span class="nav-text">对象转数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#伪数组转数组"><span class="nav-number">2.1.</span> <span class="nav-text">伪数组转数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-from-obj"><span class="nav-number">2.1.1.</span> <span class="nav-text">Array.from(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice-call-obj-Array-prototype-slice-call-obj"><span class="nav-number">2.1.2.</span> <span class="nav-text">[].slice.call(obj)/Array.prototype.slice.call(obj)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可遍历对象转数组（部署了iterator接口）"><span class="nav-number">2.2.</span> <span class="nav-text">可遍历对象转数组（部署了iterator接口）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-from-obj-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Array.from(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice-call-obj-Array-prototype-slice-call-obj-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">[].slice.call(obj)/Array.prototype.slice.call(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展运算符（…）"><span class="nav-number">2.2.3.</span> <span class="nav-text">扩展运算符（…）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他方法（Object方法）"><span class="nav-number">2.3.</span> <span class="nav-text">其他方法（Object方法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-keys-obj"><span class="nav-number">2.3.1.</span> <span class="nav-text">Object.keys(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-getOwnPropertyNames-obj"><span class="nav-number">2.3.2.</span> <span class="nav-text">Object.getOwnPropertyNames(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-values-obj"><span class="nav-number">2.3.3.</span> <span class="nav-text">Object.values(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-entries-obj"><span class="nav-number">2.3.4.</span> <span class="nav-text">Object.entries(obj)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.4.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串转对象，对象转字符串"><span class="nav-number">3.</span> <span class="nav-text">字符串转对象，对象转字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#-1"><span class="nav-number">3.0.0.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串转数组"><span class="nav-number">4.</span> <span class="nav-text">字符串转数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组转字符串"><span class="nav-number">4.1.</span> <span class="nav-text">数组转字符串</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rivoc</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.5k字</span>
+</div>
+
+
+
+ 
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="130" alpha="0.5"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/33.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>

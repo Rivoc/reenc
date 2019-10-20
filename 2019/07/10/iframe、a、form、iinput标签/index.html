@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="html标签," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="影月流光" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="iframeiframe 的定义与用法 iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。">
+<meta name="keywords" content="html标签">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iframe、a、form、input 标签">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;07&#x2F;10&#x2F;iframe%E3%80%81a%E3%80%81form%E3%80%81iinput%E6%A0%87%E7%AD%BE&#x2F;index.html">
+<meta property="og:site_name" content="影月流光">
+<meta property="og:description" content="iframeiframe 的定义与用法 iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-8feda849ee3b16c1.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-aac4b7f957767c1f.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:updated_time" content="2019-10-20T09:14:08.012Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;14239471-8feda849ee3b16c1.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/10/iframe、a、form、iinput标签/"/>
+
+
+
+
+
+  <title>iframe、a、form、input 标签 | 影月流光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband">
+    <a href="https://github.com/you" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    </div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">影月流光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">疏影横斜水清浅</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-作品集">
+          <a href="/portfolios" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            作品集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/10/iframe%E3%80%81a%E3%80%81form%E3%80%81iinput%E6%A0%87%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rivoc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="影月流光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">iframe、a、form、input 标签</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-10T22:34:39+08:00">
+                2019-07-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html/" itemprop="url" rel="index">
+                    <span itemprop="name">html</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.3k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><h3 id="iframe-的定义与用法"><a href="#iframe-的定义与用法" class="headerlink" title="iframe 的定义与用法"></a>iframe 的定义与用法</h3><ul>
+<li>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。<a id="more"></a>
+
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-8feda849ee3b16c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>iframe 的 name 属性可以与 a 标签、form 标签的 target 属性值结合使用</p>
+<p>示例</p>
+<p>点击京东链接让京东的页面在 name 为 jd 的 iframe 中打开</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe <span class="attribute">name</span>=<span class="string">"jd"</span> <span class="attribute">frameborder</span>=<span class="string">"0"</span>&gt;iframe&lt;/iframe&gt;</span><br><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"https://www.jd.com/"</span> <span class="attribute">target</span>=<span class="string">"jd"</span>&gt;京东&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/14239471-aac4b7f957767c1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="a-标签"><a href="#a-标签" class="headerlink" title="a 标签"></a>a 标签</h2><h3 id="target"><a href="#target" class="headerlink" title="target"></a><strong>target</strong></h3><p>规定在何处打开链接文档。</p>
+<ul>
+<li><p>_self：当前页面打开。没有指定属性值时此为默认值</p>
+</li>
+<li><p>_blank:新窗口打开</p>
+</li>
+<li><p>_parent`:父级页面打开</p>
+</li>
+<li><p>_top:顶层页面打开</p>
+</li>
+<li><p>xxx:在 name 为 xxx 的窗口打开</p>
+</li>
+</ul>
+<h3 id="download"><a href="#download" class="headerlink" title="download"></a><strong>download</strong></h3><p>浏览器决定要不要下载是由 http 响应决定的。如果 http 响应的 content-type 是：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-<span class="keyword">Type</span>: application/octet-stream</span><br></pre></td></tr></table></figure>
+
+<p>浏览器就会以下载的形式接收这个响应。</p>
+<p>通常是在 a 标签上加上 download 属性。</p>
+<p>加上 downlaod 属性后，可完成对 href 属性链接文件的下载，但仅仅是限于同源文件，如果是非同源，download 属性会失效。<br>无 download 属性的时候，a 标签的默认行为是链接跳转进行预览，而针对浏览无法预览的文件，也可达到下载的效果。</p>
+<p>download 还可指定下载的文件名</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"xxx.jpg"</span> <span class="attribute">download</span>=<span class="string">"_x1_.jpg"</span>&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>后缀名一样还可以缺省：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"xxx.jpg"</span> <span class="attribute">download</span>=<span class="string">"_x1_"</span>&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="href"><a href="#href" class="headerlink" title="href"></a>href</h3><p>href 规定链接指向的页面的 URL。</p>
+<p>href 是最重要的属性，如果 href 属性没有被指定链接，<a> 标签将不是一个链接。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>刷新页面并回到顶部</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>回到顶部不刷新页面。如果当前页面中需要滚动的话，那么用这种方式就可以直接回到顶部。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//qq.com"</span>&gt;</span>QQ<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>无协议链接，表示和当前页面使用同一种协议打开，当浏览本地文件的时候，它会解析为 file:// 协议</p>
+<p>href 路径的几种情况</p>
+<ol>
+<li><p>a 标签的 href 属性值如果是以 http 开头的，那么浏览器会马上启动 http 解释器去解释该网址，首先会在本地机器去找一个 hosts 文件， 如果在 hosts 文件上该域名没有对应的主机，那么浏览器就去到对应的 dns 服务器去寻找该域名对应的主机号。如果找到了对应的主机，那么该请求就会发给对应的主机。</p>
+</li>
+<li><p>如果 a 标签的 href 属性值没有以任何协议开头，那么浏览就会启动 file 协议解释器去解释该资源路径。</p>
+</li>
+<li><p>如果 a 标签的 href 属性值并不是以 http 开始，而且其他的一些协议，那么这时候浏览器就回去到我们本地的注册表中去查找是否有处理这种协议的应用程序，如果有，那么马上启动该应用程序处理该协议。</p>
+</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#xxx"</span>&gt;</span>xxx<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>锚点，跳转到当前页面中某标签的 id 为 xxx 的部分</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>xxx<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>伪协议，点击 a 标签执行一段 js 代码，但是此方法会直接将 js 方法暴露在浏览器的状态栏，</p>
+<p>适当的方法有如下几种：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"javascript:void(0);"</span> ο<span class="attribute">nclick</span>=<span class="string">"js_method()"</span>&gt;x&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"javascript:;"</span> ο<span class="attribute">nclick</span>=<span class="string">"js_method()"</span>&gt;x&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"#"</span> ο<span class="attribute">nclick</span>=<span class="string">"js_method();return false;"</span>&gt;x&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+<h2 id="form-标签"><a href="#form-标签" class="headerlink" title="form 标签"></a>form 标签</h2><p>收集用户数据，并决定以何种方式提交给服务器</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">action：指定提交的路径</span><br><span class="line"><span class="function"><span class="keyword">method</span>：表单数据提交的方式，<span class="title">get</span>/<span class="title">post</span>，默认是<span class="title">get</span>方式提交</span></span><br><span class="line"><span class="function"><span class="title">name</span>：定义表单名称</span></span><br><span class="line"><span class="function"><span class="title">id</span>： 唯一标识符</span></span><br><span class="line"><span class="function"><span class="title">target</span>:</span>规定在何处打开action指定的路径</span><br></pre></td></tr></table></figure>
+
+<p>如果表单里没有提交按钮，就无法提交，即使按回车也无效（没有添加 js 的情况下）</p>
+<p>如果表单里只有一个<code>&lt;button&gt;&lt;/button&gt;</code>那么 button 自动升级为 submit 按钮而 <code>&lt;input type=&quot;button&quot; value=&quot;button&quot;&gt;</code>或者<code>&lt;button type=&quot;button&quot;&gt;&lt;/button&gt;</code> 不会</p>
+<h2 id="input-标签"><a href="#input-标签" class="headerlink" title="input 标签"></a>input 标签</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type：根据不同的<span class="built_in"> type </span>属性值，使得输入字段可以是文本字段、复选框、掩码后的文本控件、单选按钮、按钮等等</span><br><span class="line">name:控件的名字，不设置name 不会影响功能实现，但作为提交给后台的字段，没有name则无法提交(不加name，提交时input的值就不会出现在请求里)</span><br><span class="line">value:提交给后台的值</span><br><span class="line">id:唯一标识符</span><br></pre></td></tr></table></figure>
+
+<p>在写单选或多选时会在 input 前加上 lable 标签，使得点击 input 文字时能触发 input 控件</p>
+<p>写法：input 设置 id 属性 label 设置 for=id，从而使文字与控件关联</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="attribute">for</span>=<span class="string">"xxx"</span>&gt;点我&lt;/label&gt;</span><br><span class="line">&lt;input <span class="attribute">type</span>=<span class="string">"radio"</span> <span class="attribute">name</span>=<span class="string">"test"</span> <span class="attribute">id</span>=<span class="string">"xxx"</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>简化写法：用 lablel 嵌套 input（直接省略 id 属性，取消 for 属性绑定）</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">label</span>&gt;点我</span><br><span class="line">&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"radio"</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">label</span>&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rivoc
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/07/10/iframe%E3%80%81a%E3%80%81form%E3%80%81iinput%E6%A0%87%E7%AD%BE/" title="iframe、a、form、input 标签">http://yoursite.com/2019/07/10/iframe%E3%80%81a%E3%80%81form%E3%80%81iinput%E6%A0%87%E7%AD%BE/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html%E6%A0%87%E7%AD%BE/" rel="tag"># html标签</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/03/%E5%88%9D%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C/" rel="next" title="初见命令行">
+                <i class="fa fa-chevron-left"></i> 初见命令行
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/css%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95/" rel="prev" title="css的几种布局方法">
+                css的几种布局方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="rivoc" />
+            
+              <p class="site-author-name" itemprop="name">rivoc</p>
+              <p class="site-description motion-element" itemprop="description">慢慢走啊</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+             
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/rivoc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="1074852904@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+               
+            </div>
+           <video controls="" autoplay="" name="media"><source src="http://m8.music.126.net/20191020200137/b488384055c168ae91243389a5157717/ymusic/560e/0159/065b/ad87def2996332558a8611ee3ec61bc5.mp3?bitrate=128000" type="audio/mpeg"></video>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe"><span class="nav-number">1.</span> <span class="nav-text">iframe</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe-的定义与用法"><span class="nav-number">1.1.</span> <span class="nav-text">iframe 的定义与用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a-标签"><span class="nav-number">2.</span> <span class="nav-text">a 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#target"><span class="nav-number">2.1.</span> <span class="nav-text">target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#download"><span class="nav-number">2.2.</span> <span class="nav-text">download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#href"><span class="nav-number">2.3.</span> <span class="nav-text">href</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#form-标签"><span class="nav-number">3.</span> <span class="nav-text">form 标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input-标签"><span class="nav-number">4.</span> <span class="nav-text">input 标签</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rivoc</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.5k字</span>
+</div>
+
+
+
+ 
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="130" alpha="0.5"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1.5,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/33.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>

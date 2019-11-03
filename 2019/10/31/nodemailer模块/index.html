@@ -88,19 +88,18 @@
 
 
 
-<meta name="description" content="12npm install apidoc -gapidoc -i 输入目录 -o 输出目录    改标题">
+<meta name="description" content="第三方模块nodemailer用于发邮件 引入 1npm install nodemailer  邮箱验证码和手机验证码的逻辑基本一致， 往邮箱里发验证码目前是免费的 复制示例 1234567891011121314151617181920212223242526272829303132333435363738&amp;apos;use strict&amp;apos;;const nodemailer = require(&amp;apos;nod">
 <meta property="og:type" content="article">
-<meta property="og:title" content="x npm install apidoc -gapidoc -i 输入目录 -o 输出目录">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;x%20npm%20install%20apidoc%20-gapidoc%20-i%20%E8%BE%93%E5%85%A5%E7%9B%AE%E5%BD%95%20-o%20%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95&#x2F;index.html">
+<meta property="og:title" content="nodemailer模块">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;31&#x2F;nodemailer%E6%A8%A1%E5%9D%97&#x2F;index.html">
 <meta property="og:site_name" content="影月流光">
-<meta property="og:description" content="12npm install apidoc -gapidoc -i 输入目录 -o 输出目录    改标题">
+<meta property="og:description" content="第三方模块nodemailer用于发邮件 引入 1npm install nodemailer  邮箱验证码和手机验证码的逻辑基本一致， 往邮箱里发验证码目前是免费的 复制示例 1234567891011121314151617181920212223242526272829303132333435363738&amp;apos;use strict&amp;apos;;const nodemailer = require(&amp;apos;nod">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572013577910.png">
-<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572013611618.png">
-<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572014162483.png">
-<meta property="og:updated_time" content="2019-10-25T15:36:54.683Z">
+<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572006982656.png">
+<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572009085588.png">
+<meta property="og:updated_time" content="2019-10-31T15:23:53.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572013577910.png">
+<meta name="twitter:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572006982656.png">
 
 
 
@@ -130,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/25/x npm install apidoc -gapidoc -i 输入目录 -o 输出目录/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/10/31/nodemailer模块/"/>
 
 
 
 
 
-  <title>x npm install apidoc -gapidoc -i 输入目录 -o 输出目录 | 影月流光</title>
+  <title>nodemailer模块 | 影月流光</title>
   
 
 
@@ -285,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/x%20npm%20install%20apidoc%20-gapidoc%20-i%20%E8%BE%93%E5%85%A5%E7%9B%AE%E5%BD%95%20-o%20%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/nodemailer%E6%A8%A1%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rivoc">
@@ -302,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">x npm install apidoc -gapidoc -i 输入目录 -o 输出目录</h1>
+          <h1 class="post-title" itemprop="name headline">nodemailer模块</h1>
         
 
         <div class="post-meta">
@@ -314,8 +313,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T23:36:54+08:00">
-                2019-10-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T23:23:53+08:00">
+                2019-10-31
               </time>
             
 
@@ -346,7 +345,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  17字
+                  305字
                 </span>
               
 
@@ -383,12 +382,19 @@
       
 
       
-        <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">npm</span> <span class="string">install apidoc -g</span></span><br><span class="line"><span class="attr">apidoc</span> <span class="string">-i 输入目录 -o 输出目录</span></span><br></pre></td></tr></table></figure>
+        <p>第三方模块nodemailer用于发邮件</p>
+<p>引入</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> nodemailer</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572013577910.png" alt="1572013577910"></p>
-<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572013611618.png" alt="1572013611618"></p>
-<p>改标题</p>
-<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572014162483.png" alt="1572014162483"></p>
+<p>邮箱验证码和手机验证码的逻辑基本一致，</p>
+<p>往邮箱里发验证码目前是免费的</p>
+<p>复制示例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> nodemailer = <span class="built_in">require</span>(<span class="string">'nodemailer'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// async..await is not allowed in global scope, must use a wrapper</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Generate test SMTP service account from ethereal.email</span></span><br><span class="line">    <span class="comment">// Only needed if you don't have a real mail account for testing</span></span><br><span class="line">    <span class="keyword">let</span> testAccount = <span class="keyword">await</span> nodemailer.createTestAccount();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建发送邮件的对象</span></span><br><span class="line">    <span class="keyword">let</span> transporter = nodemailer.createTransport(&#123;</span><br><span class="line">        host: <span class="string">'smtp.qq.com'</span>,<span class="comment">//发送方邮箱（例如qq) 通过模块文件夹下的lib/wellknown/services.json更改邮箱映射的域名</span></span><br><span class="line">        port: <span class="number">587</span>,<span class="comment">//端口号</span></span><br><span class="line">        secure: <span class="literal">false</span>, <span class="comment">// true for 465, false for other ports</span></span><br><span class="line">        auth: &#123;</span><br><span class="line">            user: testAccount.user, <span class="comment">// 发送方的邮箱地址</span></span><br><span class="line">            pass: testAccount.pass <span class="comment">// mtp验证码</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// send mail with defined transport object</span></span><br><span class="line">    <span class="keyword">let</span> info = <span class="keyword">await</span> transporter.sendMail(&#123;</span><br><span class="line">        <span class="keyword">from</span>: <span class="string">'"Fred Foo 👻" &lt;foo@example.com&gt;'</span>, <span class="comment">// sender address</span></span><br><span class="line">        to: <span class="string">'bar@example.com, baz@example.com'</span>, <span class="comment">// list of receivers</span></span><br><span class="line">        subject: <span class="string">'Hello ✔'</span>, <span class="comment">// Subject line</span></span><br><span class="line">        text: <span class="string">'Hello world?'</span>, <span class="comment">// plain text body text,html二选一</span></span><br><span class="line">        html: <span class="string">'&lt;b&gt;Hello world?&lt;/b&gt;'</span> <span class="comment">// html body</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Message sent: %s'</span>, info.messageId);</span><br><span class="line">    <span class="comment">// Message sent: &lt;b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Preview only available when sending through an Ethereal account</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Preview URL: %s'</span>, nodemailer.getTestMessageUrl(info));</span><br><span class="line">    <span class="comment">// Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main().catch(<span class="built_in">console</span>.error);</span><br></pre></td></tr></table></figure>
+
+<p>nodemailer lib wellko service,json</p>
+<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572006982656.png" alt="1572006982656"></p>
+<p>邮箱设置 开启pop3/smtp服务</p>
+<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572009085588.png" alt="1572009085588"></p>
 
       
     </div>
@@ -409,7 +415,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/10/25/x%20npm%20install%20apidoc%20-gapidoc%20-i%20%E8%BE%93%E5%85%A5%E7%9B%AE%E5%BD%95%20-o%20%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95/" title="x npm install apidoc -gapidoc -i 输入目录 -o 输出目录">http://yoursite.com/2019/10/25/x%20npm%20install%20apidoc%20-gapidoc%20-i%20%E8%BE%93%E5%85%A5%E7%9B%AE%E5%BD%95%20-o%20%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95/</a>
+    <a href="http://yoursite.com/2019/10/31/nodemailer%E6%A8%A1%E5%9D%97/" title="nodemailer模块">http://yoursite.com/2019/10/31/nodemailer%E6%A8%A1%E5%9D%97/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -439,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/25/nodemailer%E6%A8%A1%E5%9D%97/" rel="next" title="nodemailer模块">
-                <i class="fa fa-chevron-left"></i> nodemailer模块
+              <a href="/2019/10/31/mongoDB%E7%9A%84%E5%AE%89%E8%A3%85/" rel="next" title="mongoDB的安装">
+                <i class="fa fa-chevron-left"></i> mongoDB的安装
               </a>
             
           </div>
@@ -449,8 +455,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/31/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%20jQuery%20%E7%9A%84%20API/" rel="prev" title="实现一个 jQuery 的 API">
-                实现一个 jQuery 的 API <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/02/koa%E8%8E%B7%E5%8F%96get%E3%80%81post%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" rel="prev" title="koa获取get、post请求参数">
+                koa获取get、post请求参数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -523,7 +529,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -631,7 +637,7 @@
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.2k字</span>
+  <span class="post-count">博客全站共13.9k字</span>
 </div>
 
 

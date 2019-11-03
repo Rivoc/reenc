@@ -88,18 +88,17 @@
 
 
 
-<meta name="description" content="第三方模块nodemailer用于发邮件 引入 1npm install nodemailer  邮箱验证码和手机验证码的逻辑基本一致， 往邮箱里发验证码目前是免费的 复制示例 1234567891011121314151617181920212223242526272829303132333435363738&amp;apos;use strict&amp;apos;;const nodemailer = require(&amp;apos;nod">
+<meta name="description" content="12345678title: koa中间件date: 2019-11-03 19:10:08tags:  - node.js  - koacategories:  - node.js  - koa     中间件就是匹配路由之前或者匹配路由之后做的一系列的操作   中间件的功能包括：执行任何代码。 修改请求和响应对象。 终结请求-响应循环。 调用堆栈中的下一个中间件。 应用级中间件 路由级中间件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodemailer模块">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;nodemailer%E6%A8%A1%E5%9D%97&#x2F;index.html">
+<meta property="og:title" content="koa中间件">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;koa%E4%B8%AD%E9%97%B4%E4%BB%B6&#x2F;index.html">
 <meta property="og:site_name" content="影月流光">
-<meta property="og:description" content="第三方模块nodemailer用于发邮件 引入 1npm install nodemailer  邮箱验证码和手机验证码的逻辑基本一致， 往邮箱里发验证码目前是免费的 复制示例 1234567891011121314151617181920212223242526272829303132333435363738&amp;apos;use strict&amp;apos;;const nodemailer = require(&amp;apos;nod">
+<meta property="og:description" content="12345678title: koa中间件date: 2019-11-03 19:10:08tags:  - node.js  - koacategories:  - node.js  - koa     中间件就是匹配路由之前或者匹配路由之后做的一系列的操作   中间件的功能包括：执行任何代码。 修改请求和响应对象。 终结请求-响应循环。 调用堆栈中的下一个中间件。 应用级中间件 路由级中间件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572006982656.png">
-<meta property="og:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572009085588.png">
-<meta property="og:updated_time" content="2019-10-25T13:13:38.534Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;03&#x2F;MgwuHloIWaxvkft.png">
+<meta property="og:updated_time" content="2019-11-03T12:40:18.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572006982656.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;03&#x2F;MgwuHloIWaxvkft.png">
 
 
 
@@ -129,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/25/nodemailer模块/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/03/koa中间件/"/>
 
 
 
 
 
-  <title>nodemailer模块 | 影月流光</title>
+  <title>koa中间件 | 影月流光</title>
   
 
 
@@ -284,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/nodemailer%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/koa%E4%B8%AD%E9%97%B4%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rivoc">
@@ -301,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">nodemailer模块</h1>
+          <h1 class="post-title" itemprop="name headline">koa中间件</h1>
         
 
         <div class="post-meta">
@@ -313,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T21:07:32+08:00">
-                2019-10-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T20:00:30+08:00">
+                2019-11-03
               </time>
             
 
@@ -345,7 +344,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  305字
+                  1.1k字
                 </span>
               
 
@@ -361,7 +360,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1min
+                  4min
                 </span>
               
             </div>
@@ -382,19 +381,42 @@
       
 
       
-        <p>第三方模块nodemailer用于发邮件</p>
-<p>引入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> nodemailer</span><br></pre></td></tr></table></figure>
+        <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: koa中间件</span><br><span class="line">date: 2019<span class="string">-11</span><span class="string">-03</span> 19:10:08</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">  - node.js</span><br><span class="line">  - koa</span><br><span class="line">categories:</span><br><span class="line">  - node.js</span><br><span class="line">  - koa</span><br></pre></td></tr></table></figure>
 
-<p>邮箱验证码和手机验证码的逻辑基本一致，</p>
-<p>往邮箱里发验证码目前是免费的</p>
-<p>复制示例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> nodemailer = <span class="built_in">require</span>(<span class="string">'nodemailer'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// async..await is not allowed in global scope, must use a wrapper</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Generate test SMTP service account from ethereal.email</span></span><br><span class="line">    <span class="comment">// Only needed if you don't have a real mail account for testing</span></span><br><span class="line">    <span class="keyword">let</span> testAccount = <span class="keyword">await</span> nodemailer.createTestAccount();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建发送邮件的对象</span></span><br><span class="line">    <span class="keyword">let</span> transporter = nodemailer.createTransport(&#123;</span><br><span class="line">        host: <span class="string">'smtp.qq.com'</span>,<span class="comment">//发送方邮箱（例如qq) 通过模块文件夹下的lib/wellknown/services.json更改邮箱映射的域名</span></span><br><span class="line">        port: <span class="number">587</span>,<span class="comment">//端口号</span></span><br><span class="line">        secure: <span class="literal">false</span>, <span class="comment">// true for 465, false for other ports</span></span><br><span class="line">        auth: &#123;</span><br><span class="line">            user: testAccount.user, <span class="comment">// 发送方的邮箱地址</span></span><br><span class="line">            pass: testAccount.pass <span class="comment">// mtp验证码</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// send mail with defined transport object</span></span><br><span class="line">    <span class="keyword">let</span> info = <span class="keyword">await</span> transporter.sendMail(&#123;</span><br><span class="line">        <span class="keyword">from</span>: <span class="string">'"Fred Foo 👻" &lt;foo@example.com&gt;'</span>, <span class="comment">// sender address</span></span><br><span class="line">        to: <span class="string">'bar@example.com, baz@example.com'</span>, <span class="comment">// list of receivers</span></span><br><span class="line">        subject: <span class="string">'Hello ✔'</span>, <span class="comment">// Subject line</span></span><br><span class="line">        text: <span class="string">'Hello world?'</span>, <span class="comment">// plain text body text,html二选一</span></span><br><span class="line">        html: <span class="string">'&lt;b&gt;Hello world?&lt;/b&gt;'</span> <span class="comment">// html body</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Message sent: %s'</span>, info.messageId);</span><br><span class="line">    <span class="comment">// Message sent: &lt;b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Preview only available when sending through an Ethereal account</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Preview URL: %s'</span>, nodemailer.getTestMessageUrl(info));</span><br><span class="line">    <span class="comment">// Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main().catch(<span class="built_in">console</span>.error);</span><br></pre></td></tr></table></figure>
 
-<p>nodemailer lib wellko service,json</p>
-<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572006982656.png" alt="1572006982656"></p>
-<p>邮箱设置 开启pop3/smtp服务</p>
-<p><img src="C:%5CUsers%5CRivoc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1572009085588.png" alt="1572009085588"></p>
+
+<blockquote>
+<p>中间件就是匹配路由之前或者匹配路由之后做的一系列的操作</p>
+</blockquote>
+<ul>
+<li>中间件的功能包括：<br>执行任何代码。 修改请求和响应对象。 终结请求-响应循环。 调用堆栈中的下一个中间件。</li>
+<li>应用级中间件 路由级中间件 错误处理中间件 第三方中间件</li>
+<li>执行顺序：先从第一个中间件开始，通过调用next()将执行权交给下一个中间件，层层传递，直到最后一个中间件，接着匹配路由，然后回头，将执行权交给上一层中间件</li>
+</ul>
+<p>这就像一个洋葱圈，从最外层开始处理中间件，全部处理完后还会回来走一趟，这就给了我们很大的操作空间</p>
+<p><img src="https://i.loli.net/2019/11/03/MgwuHloIWaxvkft.png" alt="koa的中间件模型 洋葱形"></p>
+<p><strong>使用方法：</strong><code>app.use()</code>注册中间件</p>
+<p>middleware的顺序很重要，也就是调用<code>app.use()</code>的顺序决定了middleware的顺序</p>
+<p>next()用来调用下一个中间件，</p>
+<p>如果一个中间件没有调用<code>next()</code>，会怎么办？后续的中间件将不再执行了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router()</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'第一个中间件'</span>)</span><br><span class="line">  <span class="keyword">await</span> next()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"回来执行第一个中间件"</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'第二个中间件'</span>)</span><br><span class="line">  <span class="keyword">await</span> next()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"回来执行第二个中间件"</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'第三个中间件'</span>)</span><br><span class="line">  <span class="keyword">await</span> next()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'回来执行第三个中间件'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">router.get(<span class="string">'/news'</span>, <span class="keyword">async</span> (ctx) =&gt; &#123;</span><br><span class="line">  ctx.body = <span class="string">'匹配到/news路由'</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'匹配到/news路由'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app</span><br><span class="line">  .use(router.routes())</span><br><span class="line">  .use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'starting at port 3000'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果</span></span><br><span class="line">第一个中间件</span><br><span class="line">第二个中间件</span><br><span class="line">第三个中间件</span><br><span class="line">匹配到/news路由</span><br><span class="line">回来执行第三个中间件</span><br><span class="line">回来执行第二个中间件</span><br><span class="line">回来执行第一个中间件</span><br></pre></td></tr></table></figure>
+
+<h3 id="用async语法写中间件"><a href="#用async语法写中间件" class="headerlink" title="用async语法写中间件"></a>用async语法写中间件</h3><p>我们知道 <code>async</code> 的执行机制是：只有当所有的 <code>await</code> 异步都执行完之后才能返回一个 <code>Promise</code>。所以当我们用 <code>async</code> 语法写中间件的时候，执行流程大致如下：</p>
+<p>在有多个中间件的时候，先执行第一个中间件，遇见 <code>await next()</code> ，<code>await next()</code>后面的代码会被pending，继续执行第二个中间件， <code>await next()</code> 后面的代码被 pending，继续执行……直到最后一个中间件，匹配完路由，执行完，返回 Promise，接着倒数第二个中间件开始执行后续的代码并返回Promise，然后是倒数第三个中间件，接着一直以这种方式执行直到第一个中间件执行完，并返回 <code>Promise</code>，从而实现了洋葱图所示的中间件执行顺序</p>
+<h3 id="静态资源中间件koa-static"><a href="#静态资源中间件koa-static" class="headerlink" title="静态资源中间件koa-static"></a>静态资源中间件koa-static</h3><p>当服务器内有一个文件夹，里面存放着一些静态资源，如图片、字体、文件、脚本等，通过在地址栏直接输入资源所在地址，是无法访问的，因为没有对应的路由，一个个写显然是不现实的。这就用到了<a href="https://www.npmjs.com/package/koa-static" target="_blank" rel="noopener">koa-static</a>。</p>
+<p><code>koa-static</code>是一个非常轻量的<code>koa</code>中间件，能够迅速地搭建起一个静态文件服务器，通常我们把静态文件都放进public文件夹，通过<code>koa-static</code>的处理将<code>public</code>作为静态目录后，就能直接通过根路由进行访问静态文件了。</p>
+<p>大致的实现是这样的：</p>
+<ul>
+<li>判断请求的文件是否存在，如果存在读取文件返回</li>
+<li>如果请求的文件不存在，则查看当前文件夹下是否有指定的静态资源，如果存在返回当前文件夹下的指定的静态资源</li>
+</ul>
+<p>安装</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --<span class="built_in">save</span> koa-<span class="keyword">static</span></span><br></pre></td></tr></table></figure>
+
+<p>使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> staticPath = <span class="string">'/static'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(</span><br><span class="line">  path.join(__dirname, staticPath)</span><br><span class="line">))</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx) =&gt; &#123;</span><br><span class="line">  ctx.body = <span class="string">"hello world"</span></span><br><span class="line">  <span class="built_in">console</span>.log(path.join(__dirname, staticPath))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'starting at port 3000'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：把static配置为静态资源目录后，访问时不需要输入static,直接输入静态资源名就可</p>
 
       
     </div>
@@ -415,7 +437,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/10/25/nodemailer%E6%A8%A1%E5%9D%97/" title="nodemailer模块">http://yoursite.com/2019/10/25/nodemailer%E6%A8%A1%E5%9D%97/</a>
+    <a href="http://yoursite.com/2019/11/03/koa%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="koa中间件">http://yoursite.com/2019/11/03/koa%E4%B8%AD%E9%97%B4%E4%BB%B6/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -445,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/25/mongoDB%E7%9A%84%E5%AE%89%E8%A3%85/" rel="next" title="mongoDB的安装">
-                <i class="fa fa-chevron-left"></i> mongoDB的安装
+              <a href="/2019/11/03/koa%E8%B7%AF%E7%94%B1/" rel="next" title="koa路由">
+                <i class="fa fa-chevron-left"></i> koa路由
               </a>
             
           </div>
@@ -454,10 +476,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/25/x%20npm%20install%20apidoc%20-gapidoc%20-i%20%E8%BE%93%E5%85%A5%E7%9B%AE%E5%BD%95%20-o%20%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95/" rel="prev" title="x npm install apidoc -gapidoc -i 输入目录 -o 输出目录">
-                x npm install apidoc -gapidoc -i 输入目录 -o 输出目录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -509,8 +527,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -529,7 +556,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -601,6 +628,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用async语法写中间件"><span class="nav-number">1.</span> <span class="nav-text">用async语法写中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态资源中间件koa-static"><span class="nav-number">2.</span> <span class="nav-text">静态资源中间件koa-static</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -637,7 +680,7 @@
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.2k字</span>
+  <span class="post-count">博客全站共13.9k字</span>
 </div>
 
 

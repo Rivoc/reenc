@@ -88,15 +88,15 @@
 
 
 
-<meta name="description" content="12345678title: koa获取get、post请求参数date: 2019-11-03 19:12:08tags:  - node.js  - koacategories:  - node.js  - koa    ctx对象的一些简写方法ctx.body = ctx.res.body = ctx.response.body ctx.url=ctx.request.url ctx.typ">
+<meta name="description" content="title: koa获取get、post请求参数date: 2019-11-03 19:12:08tags:  node.js koacategories: node.js koa123456789101112131415161718192021222324252627282930313233343536373839404142434445464748## ctx对象的一些简写方法`ctx.bod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="koa获取get、post请求参数">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;koa%E8%8E%B7%E5%8F%96get%E3%80%81post%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="影月流光">
-<meta property="og:description" content="12345678title: koa获取get、post请求参数date: 2019-11-03 19:12:08tags:  - node.js  - koacategories:  - node.js  - koa    ctx对象的一些简写方法ctx.body = ctx.res.body = ctx.response.body ctx.url=ctx.request.url ctx.typ">
+<meta property="og:description" content="title: koa获取get、post请求参数date: 2019-11-03 19:12:08tags:  node.js koacategories: node.js koa123456789101112131415161718192021222324252627282930313233343536373839404142434445464748## ctx对象的一些简写方法`ctx.bod">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;03&#x2F;92xyeLgG7YdvtkS.png">
-<meta property="og:updated_time" content="2019-11-03T12:36:39.250Z">
+<meta property="og:updated_time" content="2019-11-03T13:09:43.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;03&#x2F;92xyeLgG7YdvtkS.png">
 
@@ -381,18 +381,15 @@
       
 
       
-        <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: koa获取get、post请求参数</span><br><span class="line">date: 2019<span class="string">-11</span><span class="string">-03</span> 19:12:08</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">  - node.js</span><br><span class="line">  - koa</span><br><span class="line">categories:</span><br><span class="line">  - node.js</span><br><span class="line">  - koa</span><br></pre></td></tr></table></figure>
+        <p>title: koa获取get、post请求参数<br>date: 2019-11-03 19:12:08<br>tags:</p>
+<ul>
+<li>node.js</li>
+<li>koa<br>categories:</li>
+<li>node.js</li>
+<li>koa<figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## ctx对象的一些简写方法</span></span><br><span class="line"></span><br><span class="line">`ctx.body = ctx.res.body = ctx.response.body`</span><br><span class="line"></span><br><span class="line">`ctx.url=ctx.request.url`</span><br><span class="line"></span><br><span class="line">`ctx.type=ctx.response.type`</span><br><span class="line"></span><br><span class="line"><span class="comment">## 获取get请求参数</span></span><br><span class="line"></span><br><span class="line">通过request接收，获取方式有两种，query和querystring</span><br><span class="line"></span><br><span class="line">query:返回格式化的参数对象</span><br><span class="line"></span><br><span class="line">querystring:返回请求字符串</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line"><span class="keyword">const</span> Koa = <span class="keyword">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="keyword">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router()</span><br><span class="line"><span class="comment">//ctx context（上下文）,包含了request和response信息</span></span><br><span class="line">router.get(<span class="string">'/newslist'</span>, async (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> url = ctx.url</span><br><span class="line">  <span class="comment">//直接通过ctx获取</span></span><br><span class="line">  <span class="keyword">let</span> ctx_query = ctx.query</span><br><span class="line">  <span class="keyword">let</span> ctx_querystring = ctx.querystring</span><br><span class="line">  <span class="comment">//通过ctx.request获取</span></span><br><span class="line">  <span class="keyword">let</span> request = ctx.request</span><br><span class="line">  <span class="keyword">let</span> req_query = request.query</span><br><span class="line">  <span class="keyword">let</span> req_querystring = request.querystring</span><br><span class="line">  ctx.body = &#123;</span><br><span class="line">    url,</span><br><span class="line">    ctx_query,</span><br><span class="line">    ctx_querystring,</span><br><span class="line">    req_query,</span><br><span class="line">    req_querystring</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app</span><br><span class="line">  .<span class="keyword">use</span>(router.routes())</span><br><span class="line">  .<span class="keyword">use</span>(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">  console.log(<span class="string">'starting at port 3000'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-
-
-<h2 id="ctx对象的一些简写方法"><a href="#ctx对象的一些简写方法" class="headerlink" title="ctx对象的一些简写方法"></a>ctx对象的一些简写方法</h2><p><code>ctx.body = ctx.res.body = ctx.response.body</code></p>
-<p><code>ctx.url=ctx.request.url</code></p>
-<p><code>ctx.type=ctx.response.type</code></p>
-<h2 id="获取get请求参数"><a href="#获取get请求参数" class="headerlink" title="获取get请求参数"></a>获取get请求参数</h2><p>通过request接收，获取方式有两种，query和querystring</p>
-<p>query:返回格式化的参数对象</p>
-<p>querystring:返回请求字符串</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router()</span><br><span class="line"><span class="comment">//ctx context（上下文）,包含了request和response信息</span></span><br><span class="line">router.get(<span class="string">'/newslist'</span>, <span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> url = ctx.url</span><br><span class="line">  <span class="comment">//直接通过ctx获取</span></span><br><span class="line">  <span class="keyword">let</span> ctx_query = ctx.query</span><br><span class="line">  <span class="keyword">let</span> ctx_querystring = ctx.querystring</span><br><span class="line">  <span class="comment">//通过ctx.request获取</span></span><br><span class="line">  <span class="keyword">let</span> request = ctx.request</span><br><span class="line">  <span class="keyword">let</span> req_query = request.query</span><br><span class="line">  <span class="keyword">let</span> req_querystring = request.querystring</span><br><span class="line">  ctx.body = &#123;</span><br><span class="line">    url,</span><br><span class="line">    ctx_query,</span><br><span class="line">    ctx_querystring,</span><br><span class="line">    req_query,</span><br><span class="line">    req_querystring</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app</span><br><span class="line">  .use(router.routes())</span><br><span class="line">  .use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'starting at port 3000'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
+</li>
+</ul>
 <p>在地址栏输入<a href="http://localhost:3000/newslist/?user=%E5%BC%A0%E4%B8%89&amp;age=18" target="_blank" rel="noopener">http://localhost:3000/newslist/?user=%E5%BC%A0%E4%B8%89&amp;age=18</a></p>
 <p><img src="https://i.loli.net/2019/11/03/92xyeLgG7YdvtkS.png" alt="执行结果"></p>
 <h2 id="获取post请求参数"><a href="#获取post请求参数" class="headerlink" title="获取post请求参数"></a>获取post请求参数</h2><p>对于post请求，koa2没有封装方便的方法获取参数，需要自行分几步获取</p>
@@ -415,6 +412,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save koa-bodyparser</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(ctx.url===<span class="string">'/'</span> &amp;&amp; ctx.method===<span class="string">'POST'</span>)&#123;</span><br><span class="line">         <span class="keyword">let</span> postData= ctx.request.body;</span><br><span class="line">         ctx.body=postData;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>
 
 
 
@@ -440,9 +438,7 @@
 
 
 
-
-
-
+</code></pre>
       
     </div>
     
@@ -666,7 +662,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ctx对象的一些简写方法"><span class="nav-number">1.</span> <span class="nav-text">ctx对象的一些简写方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取get请求参数"><span class="nav-number">2.</span> <span class="nav-text">获取get请求参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取post请求参数"><span class="nav-number">3.</span> <span class="nav-text">获取post请求参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#koa-bodyparser中间件"><span class="nav-number">4.</span> <span class="nav-text">koa-bodyparser中间件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取post请求参数"><span class="nav-number">1.</span> <span class="nav-text">获取post请求参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#koa-bodyparser中间件"><span class="nav-number">2.</span> <span class="nav-text">koa-bodyparser中间件</span></a></li></ol></div>
             
 
           </div>
